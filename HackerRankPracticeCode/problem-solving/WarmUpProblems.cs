@@ -244,5 +244,41 @@ namespace HackerRankPracticeCode.problem_solving
             }
             return max_sum;
         }
+
+        
+        /// <summary>
+        /// Definition: Birthday Cake Candles
+        /// URL: https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+        /// </summary>
+        /// <param name="ar"></param>
+        /// <returns></returns>
+        static int birthdayCakeCandles(int[] ar)
+        {
+            int counter = 0;
+
+            int max = ar.Max();
+            for (int i = 0; i < ar.Length; i++)
+            {
+                if (ar[i] == max)
+                {
+                    counter++;
+                }
+            }
+            return counter;
+
+        }
+
+        /// <summary>
+        /// Definition: Time Conversion
+        /// URL: https://www.hackerrank.com/challenges/time-conversion/problem
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        static string timeConversion(string s)
+        {
+            DateTime d = DateTime.Parse(s);
+            return d.ToString("HH:mm:ss");
+        }
+
     }
 }
