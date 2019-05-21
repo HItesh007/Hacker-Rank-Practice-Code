@@ -25,6 +25,9 @@ namespace HackerRankPracticeCode
             {
                 Console.WriteLine(iProblems.gradingStudents(testOneDArray)[i]);
             }
+
+
+            iProblems.countApplesAndOranges(7, 10, 4, 12, new int[3] { 2, 3, -4 }, new int[3] { 3, -2, -4 });
         }
     }
 }
