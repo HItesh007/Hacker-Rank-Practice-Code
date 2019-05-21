@@ -7,16 +7,24 @@ using System.Threading.Tasks;
 
 namespace HackerRankPracticeCode
 {
-    class HackerRankMain
+    static class HackerRankMain
     {
+
+        public static double RoundTo(this double value, double roundTo)
+        {
+            return Math.Ceiling(value / roundTo) * roundTo;
+        }
+
         static void Main(string[] args)
         {
-            WarmUpProblems wp = new WarmUpProblems();
+            ImplementationProblems iProblems = new ImplementationProblems();
+            
+            int[] testOneDArray = new int[] {73, 67, 38, 33};
 
-            // Mini Max Sum
-            wp.miniMaxSum(new int[5] { 942381765, 627450398, 954173620, 583762094, 236817490 });
-
-
+            for(int i=0; i<testOneDArray.Length; i++)
+            {
+                Console.WriteLine(iProblems.gradingStudents(testOneDArray)[i]);
+            }
         }
     }
 }
