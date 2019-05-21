@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackerRankPracticeCode.problem_solving
 {
-    class WarmUpProblems
+    public class WarmUpProblems
     {
         /// <summary>
         /// Definition: Simple Array Sum
@@ -157,14 +157,13 @@ namespace HackerRankPracticeCode.problem_solving
         /// URL: https://www.hackerrank.com/challenges/mini-max-sum/problem
         /// </summary>
         /// <param name="arr"></param>
-        static void miniMaxSum(int[] arr)
+        public void miniMaxSum(int[] arr)
         {
-            int[] sumArray = new int[arr.Length];
-
+            Int64[] sumArray = new Int64[arr.Length];
 
             for (int i = 0; i < arr.Length; i++)
             {
-                int sumVal = 0;
+                Int64 sumVal = 0;
 
                 for (int x = 0; x < arr.Length; x++)
                 {
@@ -174,11 +173,9 @@ namespace HackerRankPracticeCode.problem_solving
                     }
                     sumArray[i] = sumVal;
                 }
-                Console.WriteLine("Sum At Index [" + i + "] Is : " + sumArray[i]);
+                Console.WriteLine("sumArray[" + i + "] : " + sumArray[i]);
             }
-            Console.WriteLine("Min Value Of Sum Of An Array: " + sumArray.Min());
-            Console.WriteLine("Max Value Of Sum Of An Array: " + sumArray.Max());
-
+            Console.WriteLine(sumArray.Min() + " " + sumArray.Max());
         }
 
         /// <summary>
@@ -190,18 +187,14 @@ namespace HackerRankPracticeCode.problem_solving
         static string findNumber(List<int> arr, int k)
         {
 
-            for (int i = 0; i < arr.Count; i++)
+            foreach (int a in arr)
             {
-                if (arr[i] == k)
+                
+                if(a == k)
                 {
                     return "YES";
                 }
-                else
-                {
-                    return "NO";
-                }
             }
-
             return "NO";
         }
 
